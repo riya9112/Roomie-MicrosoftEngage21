@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+:root {
+  --dark-color-a: #5d5d5d;
+  --dark-color-b: #1e7469;
+  --dark-color-c: #353535;
+  --video-player: #202125;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: url("./assets/bg.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.navbar {
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: var(--dark-color-a);
+  font-size: 1.1rem;
+}
+
+.navbar-logo {
+  height: 2.5rem;
+}
+.grey-text {
+  color: var(--dark-color-a);
+}
+
+.callButton {
+  background: var(--dark-color-b);
+  color: white;
+  border: none;
+  padding: 0.4rem 2rem;
+  border-radius: 4px;
+}
+.landing-text {
+  margin: 6rem 0 5rem 0;
+  color: var(--dark-color-c);
+}
+
+.separator {
+  border-right: 2px solid #a0a0a0;
+}
+.callRoom {
+  background-color: #111111;
+}
+.video-player-container {
+  min-height: 82vh;
+}
+
+.video-player {
+  background: var(--video-player);
+  height: 60vh;
+  width: 50%;
+  position: relative;
+}
+.callRoom-footer {
+  background: white;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.actualVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  -moz-transform: rotateY(180deg); /* Firefox */
+}
+.screenVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-player-name {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+}
+.callRoom-footer-button {
+  padding: 0.8rem 0.9rem;
+  border-radius: 50%;
+  border: 1px solid rgb(194, 194, 194);
+  margin: 0.5rem;
+}
+.endCall-button {
+  color: rgb(208, 0, 0);
+  background: white;
+}
+.callRoom-buttons-off {
+  background: rgb(208, 0, 0);
+  color: white;
+}
+.callRoom-mic-off-icon {
+  border-radius: 50%;
+  padding: 0.2rem 0.3rem 0.4rem 0.4rem;
+}
+.callRoom-video-off-icon {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* It will make the div centered from the center of the parent div */
+}
+.callRoom-buttons-on {
+  background: white;
+  color: var(--dark-color-a);
+}
+.callRoom-footer-button:hover {
+  cursor: pointer;
+}
+.share-screen-button {
+  position: absolute;
+  right: 2rem;
+}
+
+@media (max-width: 992px) {
+  .options .form-inline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    background: url("./assets/bg.svg");
+    background-size: 105rem;
+  }
+  .navbar {
+    font-size: 0.9rem;
+  }
+  .navbar-logo {
+    height: 2.3rem;
+  }
+  .landing-text {
+    font-size: 0.9rem;
+    margin: 4rem 0 5rem 0;
+  }
+  .landing-text h1 {
+    font-size: 1.9rem;
+  }
+  .options-heading {
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+  .separator {
+    border-right: none;
+    border-bottom: 1px solid #a0a0a0;
+  }
+  .callButton {
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .video-player {
+    height: 35vh;
+    width: 95%;
+    position: relative;
+  }
+  .video-player-container {
+    min-height: 84vh;
+  }
+  .callRoom-footer {
+    height: 8vh;
+  }
+  .callRoom-footer-button {
+    padding: 0.5rem 0.6rem;
+    margin: 0.5rem;
+  }
+  .share-screen-button {
+    right: 1rem;
+  }
+}
