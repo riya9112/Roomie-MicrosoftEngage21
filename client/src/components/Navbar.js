@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.PNG";
 import moment from "moment";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
@@ -22,7 +22,7 @@ const Navbar = () => {
           {time}
           <span className="m-1">&#183;</span>
           {date}
-        </span> 
+        </span>
         <AccountCircleIcon className="ml-3" fontSize="large" />
       </div>
     </div>

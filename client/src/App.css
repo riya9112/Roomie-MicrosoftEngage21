@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-
+/*@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+*/
 :root {
   --dark-color-a: #5d5d5d;
-  --dark-color-b: #1e7469;
+  --dark-color-b: #4088a1;
   --dark-color-c: #353535;
   --video-player: #202125;
 }
@@ -15,11 +15,15 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: url("./assets/bg.svg");
+
+/*  background: url("./assets/bg.svg");*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background: linear-gradient(#4088a1,#191919);
+   
 }
+
 .navbar {
   height: 8vh;
   display: flex;
@@ -31,7 +35,7 @@ body {
 }
 
 .navbar-logo {
-  height: 2.5rem;
+  height: 3rem;
 }
 .grey-text {
   color: var(--dark-color-a);
