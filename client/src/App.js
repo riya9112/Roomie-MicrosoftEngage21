@@ -5,8 +5,13 @@ import VideoPlayer from "./components/VideoPlayer";
 import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.css";
 import { SocketContext } from "./Context";
+ 
+ 
+ 
+const App = () => { 
+  
+  
 
-const App = () => {
   const { renderLanding, renderCall } = useContext(SocketContext);
   return (
     <>
@@ -17,6 +22,8 @@ const App = () => {
       <div style={{ display: renderCall() }}>
         <VideoPlayer />
       </div>
+
+      
     </>
   );
 };
