@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.css";
 import { SocketContext } from "./Context";
  
- 
+  
  
 const App = () => { 
   
@@ -22,8 +22,7 @@ const App = () => {
       <div style={{ display: renderCall() }}>
         <VideoPlayer />
       </div>
-
-      
+ 
     </>
   );
 };
