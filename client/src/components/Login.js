@@ -3,6 +3,11 @@ import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../Contents/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 
+import "../Styling/Login.css";
+import loginimg from "../assets/loginimg.png";
+//import ORlogo from "../assets/ORlogo.PNG";
+import Navbar from "./Navbar";
+
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -28,31 +33,56 @@ export default function Login() {
 
   return (
     <>
-      <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Log In</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
-            </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
-            </Form.Group>
+      <Navbar/>
+      {/* <Navbar bg="dark">
+    <Navbar.Brand href="#home">
+      <img
+          src={ORlogo}
+        width="120"
+        height="30"
+        className="d-inline-block align-top"
+        alt="React Bootstrap logo"
+      />
+    </Navbar.Brand>
+  </Navbar> */}
+      <div class="l-form">
+        <div class="shape1"></div>
+        <div class="shape2"></div>
+        <div class="form">
+          <img src={loginimg} alt="" class="form__img" />
 
-            <Button disabled={loading} className="w-100" type="submit">
-              Log In
-            </Button>
-          </Form>
-          <div className="w-100 text-center mt-3">
-        Need An Account? <Link to="/forgot-password">Forgot Password?</Link>
-      </div>
-        </Card.Body>
-      </Card>
-      <div className="w-100 text-center mt-2">
-        Need An Account? <Link to="/signup">Sign Up</Link>
+          <Card>
+            <Card.Body>
+              <h2 className="text-center mb-4">Log In</h2>
+              {error && <Alert variant="danger">{error}</Alert>}
+              <Form onSubmit={handleSubmit}>
+                <Form.Group id="email" className="form__div-input">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type="email" ref={emailRef} required />
+                </Form.Group>
+                <Form.Group id="password" className="form__div-input">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type="password" ref={passwordRef} required />
+                </Form.Group>
+
+                <Button
+                  disabled={loading}
+                  className="w-100"
+                  type="submit"
+                  variant="dark"
+                >
+                  Log In
+                </Button>
+              </Form>
+              <div className="w-100 text-center mt-3">
+                <Link to="/forgot-password">Forgot Password?</Link>
+              </div>
+              <div className="w-100 text-center mt-2">
+                Need An Account? <Link to="/signup">Sign Up</Link>
+              </div>
+            </Card.Body>
+          </Card>
+        </div>
       </div>
     </>
   );

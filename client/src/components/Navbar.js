@@ -13,7 +13,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="navbar shadow px-3">
+    <div className="navbar shadow px-3 fixed-top">
       <div>
         <img className="navbar-logo" src={Logo} alt="" />
       </div>

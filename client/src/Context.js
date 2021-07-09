@@ -6,10 +6,6 @@ import ringtone from "./assets/ringtone.mp3";
 import dialingRingtone from "./assets/dialing-ringtone.mp3";
 
 
- 
-
-
-
 const ringtoneSound = new Howl({
   src: [ringtone],
   loop: true,
@@ -39,6 +35,7 @@ const ContextProvider = ({ children }) => {
   const [userVideoMuted, setUserVideoMuted] = useState(false);
   const [screenSharing, setScreenSharing] = useState(false);
   const [userScreenSharing, setUserScreenSharing] = useState(false);
+
   const [me, setMe] = useState({
     id: "",
     name: "",
@@ -330,4 +327,4 @@ const ContextProvider = ({ children }) => {
   );
 };
 
-export { ContextProvider, SocketContext  };
+export { ContextProvider, SocketContext };
