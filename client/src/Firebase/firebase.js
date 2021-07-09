@@ -1,6 +1,8 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 
+import "firebase/firestore";
+
 const app = firebase.initializeApp({
   apiKey: "AIzaSyBJqlHwyVGgsvXUpAmmWMGvlMdSCOOTS5o",
   authDomain: "roomie-development.firebaseapp.com",
@@ -12,6 +14,10 @@ const app = firebase.initializeApp({
 });
 
 export const auth = app.auth();
+
+// const firebaseApp = firebase.initializeApp(firebaseConfig);
+export const db = app.firestore();
+
 export default app;
 
 // import firebase from "firebase";

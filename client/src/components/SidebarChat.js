@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Avatar } from "@material-ui/core";
-import "./SidebarChat.css";
+import "../Styling/SidebarChat.css";
 import db from "../Firebase/firebase";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ function SidebarChat({ id, name, addNewChat }) {
 
   useEffect(() => {
     if (id) {
-      db.collection("rooms")
+      db.firestore().collection("rooms")
         .doc(id)
         .collection("messages")
         .orderBy("timestamp", "desc")
@@ -28,7 +28,7 @@ function SidebarChat({ id, name, addNewChat }) {
     const roomName = prompt("Please Enter Name for Chat");
 
     if (roomName) {
-      db.collection("rooms").add({
+      db.firestore().collection("rooms").add({
         name: roomName,
       });
     }

@@ -3,10 +3,11 @@ import { Avatar, IconButton } from "@material-ui/core";
 import { AttachFile, MoreVert, SearchOutlined } from "@material-ui/icons";
 import MicIcon from "@material-ui/icons/Mic";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
-import "./Chat.css";
+import "../Styling/Chat.css";
 import { useParams } from "react-router-dom";
 import db from "../Firebase/firebase";
-import firebase from "../Firebase/firebase";
+//import firebase from "../Firebase/firebase";
+import { useAuth } from "../Contents/AuthContext";
 //import {useStateValue} from "./StateProvider";
 
 function Chat() {
@@ -15,16 +16,19 @@ function Chat() {
   const { roomId } = useParams();
   const [roomName, setRoomName] = useState("");
   const [messages, setMessages] = useState([]);
+  const { currentUser } = useAuth();
 
   useEffect(() => {
     if (roomId) {
-      db.collection("rooms")
+      db.firestore()
+        .collection("rooms")
         .doc(roomId)
         .onSnapshot((snapshot) => {
           setRoomName(snapshot.data().name);
         });
 
-      db.collection("rooms")
+      db.firestore()
+        .collection("rooms")
         .doc(roomId)
         .collection("messages")
         .orderBy("timestamp", "asc")
@@ -40,10 +44,10 @@ function Chat() {
 
   const sendMessage = (e) => {
     e.preventDefault();
-    db.collection("rooms").doc(roomId).collection("messages").add({
+    db.firestore().collection("rooms").doc(roomId).collection("messages").add({
       message: input,
-      name: "riri",
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      name: currentUser.email,
+       //timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       //here above line was commented
     });
 
@@ -79,7 +83,7 @@ function Chat() {
         {messages.map((message) => (
           <p
             className={`chat_message ${
-              message.name === "riri" && "chat_receiver"
+              message.name === currentUser.email && "chat_receiver"
             }`}
           >
             <span className="chat_name">{message.name}</span>

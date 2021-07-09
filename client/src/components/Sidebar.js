@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Sidebar.css";
+import "../Styling/Sidebar.css";
 import { Avatar, IconButton } from "@material-ui/core";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import ChatIcon from "@material-ui/icons/Chat";
@@ -8,11 +8,15 @@ import { SearchOutlined } from "@material-ui/icons";
 import SidebarChat from "./SidebarChat";
 import db from "../Firebase/firebase";
 
+ 
+ 
+
 function Sidebar(props) {
   const [rooms, setRooms] = useState([]);
+ 
 
   useEffect(() => {
-    const unsubscribe = db.collection("rooms").onSnapshot((snapshot) =>
+    const unsubscribe = db.firestore().collection("rooms").onSnapshot((snapshot) =>
       setRooms(
         snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -29,7 +33,7 @@ function Sidebar(props) {
   return (
     <div className="sidebar">
       <div className="sidebar_header">
-        <Avatar />
+        <Avatar/>
         <div className="sidebar_headerRight">
           <IconButton>
             <DonutLargeIcon />

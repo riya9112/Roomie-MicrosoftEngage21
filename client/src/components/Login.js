@@ -2,11 +2,11 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../Contents/AuthContext";
 import { Link, useHistory } from "react-router-dom";
-
 import "../Styling/Login.css";
-import loginimg from "../assets/loginimg.png";
-//import ORlogo from "../assets/ORlogo.PNG";
+import logimg from "../assets/logimg.svg";
 import Navbar from "./Navbar";
+
+//login screen
 
 export default function Login() {
   const emailRef = useRef();
@@ -33,23 +33,12 @@ export default function Login() {
 
   return (
     <>
-      <Navbar/>
-      {/* <Navbar bg="dark">
-    <Navbar.Brand href="#home">
-      <img
-          src={ORlogo}
-        width="120"
-        height="30"
-        className="d-inline-block align-top"
-        alt="React Bootstrap logo"
-      />
-    </Navbar.Brand>
-  </Navbar> */}
+      <Navbar />
       <div class="l-form">
         <div class="shape1"></div>
         <div class="shape2"></div>
         <div class="form">
-          <img src={loginimg} alt="" class="form__img" />
+          <img src={logimg} alt="" class="form__img" />
 
           <Card>
             <Card.Body>
