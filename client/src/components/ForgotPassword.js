@@ -66,10 +66,10 @@ export default function ForgotPassword() {
                 </Button>
               </Form>
               <div className="w-100 text-center mt-3">
-                <Link to="/login">Log In?</Link>
+                <Link to="/login" className="text-info">Log In?</Link>
               </div>
               <div className="w-100 text-center mt-2">
-                Need An Account? <Link to="/signup">Sign Up</Link>
+                Need An Account? <Link to="/signup" className="text-info">Sign Up</Link>
               </div>
             </Card.Body>
           </Card>

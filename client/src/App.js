@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Signup from "./components/Signup";
 import { AuthProvider } from "./Contents/AuthContext";
 import Login from "./components/Login";
-//import PrivateRoute from "./components/PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfile from "./components/UpdateProfile";
 
@@ -32,7 +32,7 @@ const App = () => {
             </div>
           </Route>
           <AuthProvider>
-            <Route path="/update-profile" component={UpdateProfile}></Route>
+            <PrivateRoute path="/update-profile" component={UpdateProfile}></PrivateRoute>
             <Route path="/signup" exact component={Signup} />
             <Route path="/login" exact component={Login} />
             <Route path="/forgot-password" exact component={ForgotPassword} />
