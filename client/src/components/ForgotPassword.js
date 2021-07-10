@@ -25,7 +25,7 @@ export default function ForgotPassword() {
       setLoading(true);
       await resetPassword(emailRef.cuurent.value);
       setMessage("check your inbox for further instructions");
-    } catch(err) {
+    } catch (err) {
       setError("Failed to reset password");
     }
     setLoading(false);
@@ -48,7 +48,12 @@ export default function ForgotPassword() {
               <Form onSubmit={handleSubmit}>
                 <Form.Group id="email">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" ref={emailRef} required />
+                  <Form.Control
+                    type="email"
+                    ref={emailRef}
+                    placeholder="abc@gmail.com"
+                    required
+                  />
                 </Form.Group>
 
                 <Button

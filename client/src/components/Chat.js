@@ -6,7 +6,7 @@ import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import "../Styling/Chat.css";
 import { useParams } from "react-router-dom";
 import db from "../Firebase/firebase";
-//import firebase from "../Firebase/firebase";
+import firebase from "firebase/app";
 import { useAuth } from "../Contents/AuthContext";
 //import {useStateValue} from "./StateProvider";
 
@@ -47,7 +47,8 @@ function Chat() {
     db.firestore().collection("rooms").doc(roomId).collection("messages").add({
       message: input,
       name: currentUser.email,
-       //timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+       timestamp:firebase.firestore.FieldValue.serverTimestamp()
+       // firebase.firestore.FieldValue.serverTimestamp(),
       //here above line was commented
     });
 
@@ -88,9 +89,9 @@ function Chat() {
           >
             <span className="chat_name">{message.name}</span>
             {message.message}
-            {/* <span className="chat_timestemp">
+            <span className="chat_timestemp">
               {new Date(message.timestamp?.toDate()).toUTCString()}
-            </span> */}
+            </span>
           </p>
         ))}
       </div>

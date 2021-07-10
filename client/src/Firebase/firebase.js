@@ -1,6 +1,5 @@
 import firebase from "firebase/app";
 import "firebase/auth";
-
 import "firebase/firestore";
 
 const app = firebase.initializeApp({
@@ -12,6 +11,7 @@ const app = firebase.initializeApp({
   appId: "1:170483730801:web:046b921ecac5adc474ced0",
   databaseURL: "http://roomie-development.firebaseapp.com",
 });
+
 
 export const auth = app.auth();
 

@@ -6,7 +6,7 @@
 }
 
 .sidebarChat:hover {
-  background-color: #ebebeb;
+  background-color: #4ec4f3;
 }
 
 .sidebarChat_info > h2 {
@@ -23,10 +23,12 @@
 }
 
 .add-new-chat-title {
-  margin: 0px 0px 0px 10px;
+  color: white;
+  height: 20px;
+  padding-bottom: 10px;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color:   white;
 }

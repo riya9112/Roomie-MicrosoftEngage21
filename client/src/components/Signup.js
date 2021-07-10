@@ -6,7 +6,7 @@ import "../Styling/Style.css";
 import signupimg from "../assets/signupimg.svg";
 import Navbar from "./Navbar";
 
-//Signup screen  
+//Signup screen
 
 export default function Signup() {
   const emailRef = useRef();
@@ -51,7 +51,12 @@ export default function Signup() {
               <Form onSubmit={handleSubmit}>
                 <Form.Group id="email">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" ref={emailRef} required />
+                  <Form.Control
+                    type="email"
+                    ref={emailRef}
+                    placeholder="abc@gmail.com"
+                    required
+                  />
                 </Form.Group>
                 <Form.Group id="password">
                   <Form.Label>Password</Form.Label>

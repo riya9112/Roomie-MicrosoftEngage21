@@ -3,7 +3,7 @@
 /*=== Colors ===*/
 :root {
   --first-color: #12192c;
-  --text-color: #8590ad;
+  /* --text-color: #8590ad; */
 }
 
 :root {
@@ -102,6 +102,7 @@ img {
     grid-template-columns: 1.5fr 1fr;
     padding: 0 2rem;
   }
+
   .form__img {
     display: block;
     width: 700px;

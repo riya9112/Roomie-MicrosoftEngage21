@@ -4,12 +4,12 @@ import { Avatar, IconButton } from "@material-ui/core";
 import DonutLargeIcon from "@material-ui/icons/DonutLarge";
 import ChatIcon from "@material-ui/icons/Chat";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import { SearchOutlined } from "@material-ui/icons";
+//import { SearchOutlined } from "@material-ui/icons";
 import SidebarChat from "./SidebarChat";
 import db from "../Firebase/firebase";
 
  
- 
+import SearchIcon from '@material-ui/icons/Search';
 
 function Sidebar(props) {
   const [rooms, setRooms] = useState([]);
@@ -48,7 +48,10 @@ function Sidebar(props) {
       </div>
       <div className="sidebar_search">
         <div className="sidebar_searchContainer">
-          <SearchOutlined />
+          <IconButton>
+            <SearchIcon/>
+          </IconButton>
+          {/* <SearchOutlined /> */}
           <input type="text" placeholder="Search or start new chat" />
         </div>
       </div>

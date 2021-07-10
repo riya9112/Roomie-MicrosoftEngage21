@@ -1,18 +1,21 @@
 .sidebar {
   flex: 0.35;
+  background-color: #043142;
+  border-right: 1px solid white;
 }
 
 .sidebar_search {
   display: flex;
   align-items: center;
-  background-color: #f6f6f6;
-  height: 39px;
+  background-color: #043142;
+  height: 50px;
   padding: 10px;
 }
 
 .sidebar_searchContainer > .MuiSvgIcon-root {
   color: gray;
   padding: 10px;
+  
 }
 
 .sidebar_searchContainer > input {
@@ -32,7 +35,8 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  border-right: 1px solid lightgray;
+  border-right: 1px solid #4ec4f3;
+  background-color: #4ec4f3;
 }
 
 .sidebar_headerRight {
