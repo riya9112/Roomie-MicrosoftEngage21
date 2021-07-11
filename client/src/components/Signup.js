@@ -60,7 +60,12 @@ export default function Signup() {
                 </Form.Group>
                 <Form.Group id="password">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" ref={passwordRef} required />
+                  <Form.Control
+                    type="password"
+                    ref={passwordRef}
+                    placeholder="must be 6 characters or more"
+                    required
+                  />
                 </Form.Group>
                 <Form.Group id="password-confirm">
                   <Form.Label>Password Confirmation</Form.Label>
@@ -80,7 +85,11 @@ export default function Signup() {
                 </Button>
               </Form>
               <div className="w-100 text-center mt-2">
-                Already Have An Account? <Link to="/login" className="text-info"> Log In</Link>
+                Already Have An Account?{" "}
+                <Link to="/login" className="text-info">
+                  {" "}
+                  Log In
+                </Link>
               </div>
             </Card.Body>
           </Card>
