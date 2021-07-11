@@ -38,6 +38,7 @@ A Video-Chat web application built with WebRTC and React, that provides peer-to-
 2. Choose the level between Hard and Easy, as your wish.
 3. You can choose to move first or let the bot start the moves.
 4. Play your game and try to defeat the bot.
+
    > Note : You need to allow access to video and audio to place calls.
 
 ---
