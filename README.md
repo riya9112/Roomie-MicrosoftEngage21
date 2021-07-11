@@ -6,8 +6,6 @@ A Video-Chat web application built with WebRTC and React, that provides peer-to-
 
 > Meet, chat, call, and Play in just one place.
 
----
-
 ## How to use
 
 > Open the application, Login or signup and you'll have 3 options as follows:-
@@ -16,21 +14,15 @@ A Video-Chat web application built with WebRTC and React, that provides peer-to-
 2. Group chat
 3. Play Tic-tac-toe
 
----
-
 ### To call a user
 
 1. Call a user by specifying their ID
 2. Share your id with the user you wish to communicate with.
 
----
-
 ### To chat with a user
 
 1. Click on th group chat options and start talking to your friend.
 2. or Create a new group as per your need.
-
----
 
 ### To play Tic-Tac-Toe
 
@@ -40,8 +32,6 @@ A Video-Chat web application built with WebRTC and React, that provides peer-to-
 4. Play your game and try to defeat the bot.
 
    > Note : You need to allow access to video and audio to place calls.
-
----
 
 ## Features
 
@@ -56,8 +46,6 @@ A Video-Chat web application built with WebRTC and React, that provides peer-to-
 - Ringtone
 - Authentication
 - Neat and clean UI
-
----
 
 ## Screenshots
 
