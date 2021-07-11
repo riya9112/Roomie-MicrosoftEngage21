@@ -1,4 +1,4 @@
-# **ROOMIE **
+# **ROOMIE**
 
 ## _Microsoft Engage 2021 project_
 
