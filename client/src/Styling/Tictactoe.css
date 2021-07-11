@@ -1,0 +1,204 @@
+* {
+  outline: none;
+  user-select: none;
+}
+
+p {
+  text-align: center;
+}
+
+.blue {
+  margin: 0;
+  padding: 0;
+  color: #4b74ff;
+}
+
+.red {
+  margin: 0;
+  padding: 0;
+  color: #cf0000;
+}
+
+.green {
+  margin: 0;
+  padding: 0;
+  color: #00b533;
+}
+
+button {
+  outline: none;
+  background: transparent;
+  color: white;
+  font-family: Manjari, sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  border: none;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  margin: 45px 0 45px 15px;
+  color: #ffffff;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: transparent;
+  float: left;
+  font-size: 30px;
+  line-height: 34px;
+  height: 80px;
+  margin: 6px;
+  padding: 11px 0;
+  text-align: center;
+  width: 80px;
+  color: white;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  height: 37px;
+  color: black;
+  font-size: 30px;
+  margin: 571px auto 0 auto;
+}
+
+.game-board {
+  position: absolute;
+  left: calc(50% - 276px / 2);
+  top: 217px;
+}
+
+.left {
+  position: absolute;
+  width: 255px;
+  height: 549px;
+  left: 0;
+  top: 90px;
+  padding: 0;
+  background: #000d3a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  border-radius: 0 30px 30px 0;
+}
+
+.right {
+  position: absolute;
+  width: 250px;
+  height: 549px;
+  right: 0;
+  top: 90px;
+  background: #000d3a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 0 0 30px;
+}
+
+.new-game {
+  position: absolute;
+  width: 188px;
+  height: 59px;
+  left: 23px;
+  bottom: 39px;
+  background: linear-gradient(180deg, #0032db 0%, #00208a 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 10px 0 0 40px;
+}
+
+.move-button {
+  padding-top: 10px;
+  display: block;
+  width: 115.4px;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin: 0 0 30.85px 74px;
+}
+
+.selected {
+  border: 1px solid #4b74ff;
+}
+
+.refresh {
+  position: absolute;
+  top: 17px;
+  left: 24px;
+}
+
+.l1 {
+  margin-left: -20px;
+  margin-bottom: 25px;
+}
+
+.l2 {
+  margin: 55px 0 25px -20px;
+}
+
+.x-b {
+  width: 188px;
+  height: 49px;
+  margin: 0 0 19px 23px;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.mode {
+  width: 84px;
+  height: 49px;
+  margin-left: 21px;
+  border-radius: 15px;
+  padding-top: 10px;
+}
+
+.little-signs {
+  position: absolute;
+  margin-top: -8px;
+  margin-left: 5px;
+}
+
+.little-sign {
+  display: inline;
+  width: 29px;
+  height: 29px;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.x {
+  margin-left: -5px;
+}
+
+.o {
+  margin-top: -9px;
+}
