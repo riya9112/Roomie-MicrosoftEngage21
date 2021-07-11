@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Avatar, IconButton } from "@material-ui/core";
-import { AttachFile, MoreVert, SearchOutlined } from "@material-ui/icons";
+import { Avatar } from "@material-ui/core";
 import MicIcon from "@material-ui/icons/Mic";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import "../Styling/Chat.css";
@@ -8,7 +7,6 @@ import { useParams } from "react-router-dom";
 import db from "../Firebase/firebase";
 import firebase from "firebase/app";
 import { useAuth } from "../Contents/AuthContext";
-//import {useStateValue} from "./StateProvider";
 
 function Chat() {
   const [input, setInput] = useState("");
@@ -47,9 +45,8 @@ function Chat() {
     db.firestore().collection("rooms").doc(roomId).collection("messages").add({
       message: input,
       name: currentUser.email,
-       timestamp:firebase.firestore.FieldValue.serverTimestamp()
-       // firebase.firestore.FieldValue.serverTimestamp(),
-      //here above line was commented
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      // firebase.firestore.FieldValue.serverTimestamp(),
     });
 
     setInput("");
@@ -67,17 +64,6 @@ function Chat() {
               messages[messages.length - 1]?.timestamp?.toDate()
             ).toUTCString()}
           </p>
-        </div>
-        <div className="chat_headerRight">
-          <IconButton>
-            <SearchOutlined />
-          </IconButton>
-          <IconButton>
-            <AttachFile />
-          </IconButton>
-          <IconButton>
-            <MoreVert />
-          </IconButton>
         </div>
       </div>
       <div className="chat_body">

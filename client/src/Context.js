@@ -47,7 +47,7 @@ const ContextProvider = ({ children }) => {
   const socket = useRef();
 
   useEffect(() => {
-    socket.current = io.connect("/");
+    socket.current = io.connect("https://roomie-riri.herokuapp.com/");
 
     getmyVideo();
     return () => {

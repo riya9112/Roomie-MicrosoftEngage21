@@ -11,6 +11,7 @@ import UpdateProfile from "./components/UpdateProfile";
 import ChatScreen from "./components/ChatScreen";
 
 import Main from "./Main";
+import Tictactoe from "./components/Tictactoe";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/signup" exact component={Signup} />
             <Route path="/login" exact component={Login} />
             <Route path="/forgot-password" exact component={ForgotPassword} />
+            <Route path="/tictactoe" exact component={Tictactoe} />
           </AuthProvider>
         </Switch>
       </Router>

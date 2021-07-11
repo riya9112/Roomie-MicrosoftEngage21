@@ -25,8 +25,7 @@
 
 .add-new-chat-title {
   color: white;
-  height: 20px;
-  padding-bottom: 10px;
+  max-height: 20px;
 }
 
 a {
