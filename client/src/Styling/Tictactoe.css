@@ -71,8 +71,6 @@ ul {
   width: 80px;
   color: white;
   border: 0.1vw solid #191919;
-  float: left;
-  font-weight: bold;
 }
 
 .square:focus {
