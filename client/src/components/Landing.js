@@ -29,7 +29,7 @@ const Landing = () => {
         </p>
         <Button variant="dark" className="ml-4">
           <Link to="/chat" className="text-info">
-            Group Chat
+            Chat Room
           </Link>
         </Button>
         <Button variant="dark" className="ml-3">
